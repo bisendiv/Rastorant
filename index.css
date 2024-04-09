@@ -1,0 +1,296 @@
+/* ......Global Styles.......... */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    padding: 2px 5px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to left, rgba(30, 0, 128, 0.624), rgba(255, 0, 195, 0.689)), url(https://jolly-kalam-23776e.netlify.app/restaurantwebsite/assets/images/topography.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+     /* ..........navigation     */
+.menu-btn {
+    display: none; 
+    background: #ffc600;
+    border: 0;
+    padding: 10px 20px;
+}
+
+header {
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0px;
+    align-items: center;
+    text-align: center;
+}
+
+ul li {
+    list-style: none;
+    margin: 15px;
+}
+
+a:hover {
+    background: rgba(216, 159, 3, 0.585);
+    font-size: larger;
+}
+
+header nav li a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgb(209, 161, 3);
+    color: black;
+    height: 50px;
+    width: 240px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+/* .........Main Section Styles */
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 15px;
+    grid-template-areas: 
+    "b1 b2"
+    "b1 b3";
+}
+
+.box1 {
+    grid-area: b1;
+}
+
+.box2 {
+    grid-area: b2;
+}
+
+.box3 {
+    grid-area: b3;
+}
+
+#side-img {
+    background-image: url(https://jolly-kalam-23776e.netlify.app/restaurantwebsite/images/taco.jpg);
+    height: 400px;
+    width: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 80px;
+    padding-top: 150px;
+    margin-left: 10px;
+    h2{
+        background: #ffc600;
+        padding-left: 50px;
+        padding-top: 10px;
+        margin-bottom: 20px;
+        margin-top: 50px;
+        margin-left: 50px;
+        height: 50px;
+        width: 300px;
+    }
+    h3{
+        background: #ffc600;
+        margin-left: 50px;
+        padding-left: 10px;
+        padding-top: 10px;
+        margin-bottom: 20px;
+        height: 40px;
+        width: 200px;
+    }
+}
+
+#side-box1 {
+    background: rgb(209, 161, 3);
+    width: 350px;
+    padding-top: 70px;
+    padding-left: 150px;
+    h1{
+        font-size: 30px;
+    }
+    h3{
+        padding-left: 10px;
+    }
+}
+
+/* ................Boxex Styles....... */
+.boxex {
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.sec {
+    text-align: center;
+    background: white;
+    height: 200px;
+    width: 300px;
+    padding: 10px;
+}
+
+.icon {
+    font-size: 50px;
+}
+
+.para {
+    font-weight: 900;
+    opacity: 0.6;
+}
+
+/* ...............About Section Styles */
+.about {
+    height: 400px;
+    background: white;
+    margin-left: 50px;
+    margin-right: 60px;
+    margin-top: 30px;
+}
+
+.about-content {
+    display: flex;
+    padding: 60px 70px;
+    align-items: center;
+}
+
+.about-img {
+    width: 400px;
+}
+
+.about-details h2 {
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.about-details p {
+    font-weight: 900;
+    font-size: smaller;
+    padding-bottom: 10px;
+}
+.about-btn{
+    background: #ffc600;
+    border: 0;
+    padding: 10px 20px;
+    font-weight: 800;
+}
+
+/*............... Gallery Section Styles */
+.gallary {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+}
+
+/* .....Media Queries for Responsive Design..... */
+
+@media screen and (max-width: 768px) {
+    
+    main {
+        grid-template-columns: repeat(1, 1fr); 
+        grid-template-areas: 
+        "b1 b1"
+        "b2 b2"
+        "b3 b3";
+    }
+
+    .box1 {
+        grid-column: span 2; 
+        width:auto;
+    }
+
+    #side-img {
+        background-size: cover; 
+        padding-left: 10px;
+        padding-top: 50px;
+    }
+
+    #side-box1 {
+        padding-left: 20px;
+    }
+    #side-box1 {
+        background: rgb(209, 161, 3);
+        width: 350px;
+        height: 150px;
+        padding-top: 40px;
+        padding-left: 150px;
+        h1{
+            font-size: 30px;
+        }
+        h3{
+            padding-left: 15px;
+        }
+    }
+
+    .boxex {
+        padding-left: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .about-img {
+        width: 100%; 
+        max-width: 300px; 
+    }
+}
+    /* .....media queries for mobile responsive......... */
+@media screen and (max-width: 500px) {
+    main {
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+        "b1 b1"
+        "b2 b2"
+        "b3 b3";
+    }
+    .menu-list{
+        display: none;
+    }
+    .menu-btn{
+        display: block;
+        margin-left: 20px;
+    }
+    #side-img {
+        height: auto;
+        width: 90%;
+        padding-left: 10px;
+        padding-top: 50px;
+        h2{
+            width:200px ;
+            height: 70px;
+        }
+    }
+
+    .side-box1 {
+        padding-left: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .boxex {
+        padding-left: 20px;
+    }
+
+    .about-content {
+        padding: 20px;
+    }
+}
